@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import rosa.ribeiro.jonas.model.PersonModel;
 import rosa.ribeiro.jonas.services.PersonService;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 @RestController
@@ -17,6 +18,14 @@ public class PersonController {
 
     @Autowired
     private PersonService service;
+
+    @RequestMapping(
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public List<PersonModel> findAll(){
+        return service.findAll();
+    }
 
     @RequestMapping(value = "/{id}",
         method = RequestMethod.GET,
