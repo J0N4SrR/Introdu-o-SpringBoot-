@@ -1,6 +1,7 @@
 package rosa.ribeiro.jonas.services;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
 import rosa.ribeiro.jonas.model.PersonModel;
 
 import java.util.ArrayList;
@@ -10,8 +11,8 @@ import java.util.logging.Logger;
 
 @Service
 public class PersonService {
-
     private final AtomicLong counter = new AtomicLong();
+
     private Logger logger = Logger.getLogger(PersonService.class.getName());
 
     public List<PersonModel> findAll(){
@@ -24,7 +25,8 @@ public class PersonService {
     }
 
     public PersonModel findById(String id){
-        logger.info("Finding one Person!");
+        logger.info("Finding all People!");
+        //MockPerson
         PersonModel person = new PersonModel();
         person.setId(counter.incrementAndGet());
         person.setFirstName("Leandro");
@@ -35,13 +37,29 @@ public class PersonService {
     }
 
     private PersonModel mockPerson(int i) {
-        PersonModel person = new PersonModel();
-        person.setId(counter.incrementAndGet());
-        person.setFirstName("FirstName" + i);
-        person.setLastName("LastName" + i);
-        person.setAddress("Address"+i);
-        person.setGender("Male");
+            PersonModel person = new PersonModel();
+            person.setId(counter.incrementAndGet());
+            person.setFirstName("FirstName" + i);
+            person.setLastName("LastName" + i);
+            person.setAddress("Address"+i);
+            person.setGender("Male");
+            return person;
+    }
+
+    public PersonModel create(PersonModel person){
+        logger.info("Creating one Person!");
         return person;
     }
 
+    public PersonModel update(PersonModel person){
+        logger.info("Updating one Person!");
+        return person;
+    }
+
+    public void delete(String id){
+        logger.info("Deleting one Person!");
+
+    }
 }
+
+
