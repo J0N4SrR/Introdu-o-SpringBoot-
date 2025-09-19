@@ -5,9 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import rosa.ribeiro.jonas.model.PersonModel;
 import rosa.ribeiro.jonas.services.PersonService;
-
 import java.util.List;
-import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/person")
@@ -31,7 +29,6 @@ public class PersonController {
     public PersonModel findById(@PathVariable("id") String id) {
         return service.findById(id);
     }
-
 
     @RequestMapping(method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_VALUE,
