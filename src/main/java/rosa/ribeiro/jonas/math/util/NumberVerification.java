@@ -1,4 +1,4 @@
-package rosa.ribeiro.jonas.util;
+package rosa.ribeiro.jonas.math.util;
 
 public class NumberVerification {
     public static boolean isNumeric(String strNumber) {

@@ -1,11 +1,9 @@
-package rosa.ribeiro.jonas.controllers;
+package rosa.ribeiro.jonas.greeting;
 
-import com.fasterxml.jackson.databind.ser.std.StdKeySerializers;
-import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import rosa.ribeiro.jonas.model.Greeting;
+
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController

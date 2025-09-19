@@ -1,4 +1,4 @@
-package rosa.ribeiro.jonas.util;
+package rosa.ribeiro.jonas.math.util;
 
 import rosa.ribeiro.jonas.exception.UnsupportedMathOperationExeption;
 

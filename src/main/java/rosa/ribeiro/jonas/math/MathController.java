@@ -1,13 +1,12 @@
-package rosa.ribeiro.jonas.controllers;
+package rosa.ribeiro.jonas.math;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import rosa.ribeiro.jonas.exception.UnsupportedMathOperationExeption;
-import rosa.ribeiro.jonas.math.SimpleMath;
 
-import static rosa.ribeiro.jonas.util.NumberConverter.convertToDouble;
-import static rosa.ribeiro.jonas.util.NumberVerification.isNumeric;
+import static rosa.ribeiro.jonas.math.util.NumberConverter.convertToDouble;
+import static rosa.ribeiro.jonas.math.util.NumberVerification.isNumeric;
 
 
 @RestController
